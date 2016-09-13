@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F4DF1021D87AEE9006AFBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1011D87AEE9006AFBB1 /* Assets.xcassets */; };
+		4F4DF1091D87AEE9006AFBB1 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4F4DF1081D87AEE9006AFBB1 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4F4DF10E1D87AEE9006AFBB1 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4DF10D1D87AEE9006AFBB1 /* Messages.framework */; };
+		4F4DF1111D87AEE9006AFBB1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DF1101D87AEE9006AFBB1 /* MessagesViewController.swift */; };
+		4F4DF1141D87AEE9006AFBB1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */; };
+		4F4DF1161D87AEE9006AFBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F4DF10A1D87AEE9006AFBB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DF0F81D87AEE9006AFBB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F4DF1071D87AEE9006AFBB1;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F4DF11D1D87AEE9006AFBB1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4F4DF1091D87AEE9006AFBB1 /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4F4DF0FE1D87AEE9006AFBB1 /* Poll-ish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll-ish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4DF1011D87AEE9006AFBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F4DF1031D87AEE9006AFBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F4DF1081D87AEE9006AFBB1 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4DF10D1D87AEE9006AFBB1 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		4F4DF1101D87AEE9006AFBB1 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		4F4DF1131D87AEE9006AFBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F4DF1171D87AEE9006AFBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F4DF1051D87AEE9006AFBB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4DF10E1D87AEE9006AFBB1 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F4DF0F71D87AEE9006AFBB1 = {
+			isa = PBXGroup;
+			children = (
+				4F4DF1001D87AEE9006AFBB1 /* Poll-ish */,
+				4F4DF10F1D87AEE9006AFBB1 /* MessagesExtension */,
+				4F4DF10C1D87AEE9006AFBB1 /* Frameworks */,
+				4F4DF0FF1D87AEE9006AFBB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F4DF0FF1D87AEE9006AFBB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DF0FE1D87AEE9006AFBB1 /* Poll-ish.app */,
+				4F4DF1081D87AEE9006AFBB1 /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F4DF1001D87AEE9006AFBB1 /* Poll-ish */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DF1011D87AEE9006AFBB1 /* Assets.xcassets */,
+				4F4DF1031D87AEE9006AFBB1 /* Info.plist */,
+			);
+			path = "Poll-ish";
+			sourceTree = "<group>";
+		};
+		4F4DF10C1D87AEE9006AFBB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DF10D1D87AEE9006AFBB1 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F4DF10F1D87AEE9006AFBB1 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DF1101D87AEE9006AFBB1 /* MessagesViewController.swift */,
+				4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */,
+				4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */,
+				4F4DF1171D87AEE9006AFBB1 /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F4DF0FD1D87AEE9006AFBB1 /* Poll-ish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F4DF11E1D87AEE9006AFBB1 /* Build configuration list for PBXNativeTarget "Poll-ish" */;
+			buildPhases = (
+				4F4DF0FC1D87AEE9006AFBB1 /* Resources */,
+				4F4DF11D1D87AEE9006AFBB1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F4DF10B1D87AEE9006AFBB1 /* PBXTargetDependency */,
+			);
+			name = "Poll-ish";
+			productName = "Poll-ish";
+			productReference = 4F4DF0FE1D87AEE9006AFBB1 /* Poll-ish.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		4F4DF1071D87AEE9006AFBB1 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F4DF11A1D87AEE9006AFBB1 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				4F4DF1041D87AEE9006AFBB1 /* Sources */,
+				4F4DF1051D87AEE9006AFBB1 /* Frameworks */,
+				4F4DF1061D87AEE9006AFBB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = 4F4DF1081D87AEE9006AFBB1 /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F4DF0F81D87AEE9006AFBB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Evan Lewis";
+				TargetAttributes = {
+					4F4DF0FD1D87AEE9006AFBB1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7ZE54HDXZR;
+						ProvisioningStyle = Automatic;
+					};
+					4F4DF1071D87AEE9006AFBB1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7ZE54HDXZR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4F4DF0FB1D87AEE9006AFBB1 /* Build configuration list for PBXProject "Poll-ish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F4DF0F71D87AEE9006AFBB1;
+			productRefGroup = 4F4DF0FF1D87AEE9006AFBB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F4DF0FD1D87AEE9006AFBB1 /* Poll-ish */,
+				4F4DF1071D87AEE9006AFBB1 /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F4DF0FC1D87AEE9006AFBB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4DF1021D87AEE9006AFBB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F4DF1061D87AEE9006AFBB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4DF1161D87AEE9006AFBB1 /* Assets.xcassets in Resources */,
+				4F4DF1141D87AEE9006AFBB1 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F4DF1041D87AEE9006AFBB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4DF1111D87AEE9006AFBB1 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F4DF10B1D87AEE9006AFBB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F4DF1071D87AEE9006AFBB1 /* MessagesExtension */;
+			targetProxy = 4F4DF10A1D87AEE9006AFBB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F4DF1131D87AEE9006AFBB1 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F4DF1181D87AEE9006AFBB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F4DF1191D87AEE9006AFBB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F4DF11B1D87AEE9006AFBB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 7ZE54HDXZR;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4F4DF11C1D87AEE9006AFBB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 7ZE54HDXZR;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4F4DF11F1D87AEE9006AFBB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ZE54HDXZR;
+				INFOPLIST_FILE = "Poll-ish/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F4DF1201D87AEE9006AFBB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ZE54HDXZR;
+				INFOPLIST_FILE = "Poll-ish/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F4DF0FB1D87AEE9006AFBB1 /* Build configuration list for PBXProject "Poll-ish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4DF1181D87AEE9006AFBB1 /* Debug */,
+				4F4DF1191D87AEE9006AFBB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F4DF11A1D87AEE9006AFBB1 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4DF11B1D87AEE9006AFBB1 /* Debug */,
+				4F4DF11C1D87AEE9006AFBB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4F4DF11E1D87AEE9006AFBB1 /* Build configuration list for PBXNativeTarget "Poll-ish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4DF11F1D87AEE9006AFBB1 /* Debug */,
+				4F4DF1201D87AEE9006AFBB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F4DF0F81D87AEE9006AFBB1 /* Project object */;
+}
