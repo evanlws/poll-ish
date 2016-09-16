@@ -158,9 +158,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-3z-HdR">
                                 <state key="normal" title="Create Poll"/>
+                                <connections>
+                                    <action selector="createPollWithButtonTapped:" destination="YfC-kL-egt" eventType="touchUpInside" id="rnp-kV-6QW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-5Z-uVv">
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelWithButtonTapped:" destination="YfC-kL-egt" eventType="touchUpInside" id="u6u-ew-2P7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,8 +183,8 @@
                             <constraint firstItem="rG4-5Z-uVv" firstAttribute="leading" secondItem="9um-Rj-00g" secondAttribute="leadingMargin" constant="60" id="euZ-iQ-w6T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KAN-3z-HdR" secondAttribute="trailing" constant="60" id="f3f-Th-ZG7"/>
                             <constraint firstItem="eD9-VE-vdX" firstAttribute="centerX" secondItem="y2j-K2-mdi" secondAttribute="centerX" id="f6x-Qg-2zD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="y2j-K2-mdi" secondAttribute="trailing" id="hEx-nK-dlk"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="y2j-K2-mdi" secondAttribute="leading" id="jWF-Ba-dYd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y2j-K2-mdi" secondAttribute="trailing" constant="20" id="hEx-nK-dlk"/>
+                            <constraint firstItem="y2j-K2-mdi" firstAttribute="leading" secondItem="9um-Rj-00g" secondAttribute="leadingMargin" constant="20" id="jWF-Ba-dYd"/>
                             <constraint firstItem="vI6-71-XqQ" firstAttribute="trailing" secondItem="y2j-K2-mdi" secondAttribute="trailing" id="kCb-hj-mwU"/>
                             <constraint firstItem="vI6-71-XqQ" firstAttribute="leading" secondItem="y2j-K2-mdi" secondAttribute="leading" id="kPf-YO-du5"/>
                             <constraint firstItem="6N1-1z-VOh" firstAttribute="leading" secondItem="y2j-K2-mdi" secondAttribute="leading" id="oJw-3L-xGi"/>
@@ -187,6 +193,11 @@
                             <constraint firstItem="KAN-3z-HdR" firstAttribute="centerY" secondItem="rG4-5Z-uVv" secondAttribute="centerY" id="y6P-5y-hDn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstChoiceTextField" destination="y2j-K2-mdi" id="tcr-GG-ULV"/>
+                        <outlet property="questionTextField" destination="eD9-VE-vdX" id="2A7-q6-UaV"/>
+                        <outlet property="secondChoiceTextField" destination="vI6-71-XqQ" id="2p8-TN-unf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gI2-4e-68i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

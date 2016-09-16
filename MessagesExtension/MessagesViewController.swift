@@ -10,7 +10,7 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
-    
+  
   override func willBecomeActive(with conversation: MSConversation) {
     super.willBecomeActive(with: conversation)
     
@@ -60,14 +60,19 @@ class MessagesViewController: MSMessagesAppViewController {
   // MARK: Navigation
   private func instantiateCreatePollController() -> UIViewController {
     guard let createPollViewController = storyboard?.instantiateViewController(withIdentifier: CreatePollViewController.identifier) as? CreatePollViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
-    
+    createPollViewController.delegate = self
     return createPollViewController
   }
   
   private func instantiatePollsViewController() -> UIViewController {
     guard let pollsViewController = storyboard?.instantiateViewController(withIdentifier: PollsViewController.identifier) as? PollsViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
-    
     return pollsViewController
   }
 
+}
+
+extension MessagesViewController: CreatePollViewControllerDelegate {
+  func userCreated(poll: Poll, inViewController: CreatePollViewController) {
+    debugPrint("created poll \(poll.question)")
+  }
 }
