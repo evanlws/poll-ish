@@ -147,5 +147,55 @@
             </objects>
             <point key="canvasLocation" x="1464.8" y="91.304347826086968"/>
         </scene>
+        <!--Voting View Controller-->
+        <scene sceneID="g5v-pg-bLs">
+            <objects>
+                <viewController storyboardIdentifier="VotingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCG-eI-rip" customClass="VotingViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="caj-FL-cFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="9dL-Az-gpc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgF-eB-fHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psk-Oj-qcs">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapOptionOneWithSender:" destination="QCG-eI-rip" eventType="touchUpInside" id="lJW-eb-cGn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh4-pN-bj5">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapOptionTwoWithSender:" destination="QCG-eI-rip" eventType="touchUpInside" id="Yjs-4Z-Ll3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNM-Lf-PH8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9dL-Az-gpc" firstAttribute="top" secondItem="Dh4-pN-bj5" secondAttribute="bottom" constant="370" id="4m9-WS-c07"/>
+                            <constraint firstItem="PNM-Lf-PH8" firstAttribute="centerX" secondItem="Psk-Oj-qcs" secondAttribute="centerX" id="HEw-ZL-cQ0"/>
+                            <constraint firstItem="PNM-Lf-PH8" firstAttribute="top" secondItem="caj-FL-cFS" secondAttribute="bottom" constant="33" id="LkK-N6-8e1"/>
+                            <constraint firstItem="Dh4-pN-bj5" firstAttribute="top" secondItem="Psk-Oj-qcs" secondAttribute="bottom" constant="54" id="UQG-Av-tjf"/>
+                            <constraint firstItem="Psk-Oj-qcs" firstAttribute="leading" secondItem="Dh4-pN-bj5" secondAttribute="leading" id="ZKh-Bb-Ddf"/>
+                            <constraint firstItem="PNM-Lf-PH8" firstAttribute="centerX" secondItem="kgF-eB-fHt" secondAttribute="centerX" id="cxX-Rd-eFF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="optionOneButton" destination="Psk-Oj-qcs" id="xpU-pa-MV7"/>
+                        <outlet property="optionTwoButton" destination="Dh4-pN-bj5" id="yvJ-g2-Pdd"/>
+                        <outlet property="questionLabel" destination="PNM-Lf-PH8" id="gaB-wA-wuc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hqd-5U-G41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="91"/>
+        </scene>
     </scenes>
 </document>

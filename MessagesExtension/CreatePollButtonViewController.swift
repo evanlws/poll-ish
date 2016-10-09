@@ -17,7 +17,7 @@ class CreatePollButtonViewController: UIViewController {
     @IBAction func createPollButtonTapped(withSender createPollButton: UIButton) {
         delegate?.createPollButtonTapped(from: self)
     }
-    
+
 }
 
 protocol CreatePollButtonViewControllerDelegate: class {

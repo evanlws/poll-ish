@@ -25,20 +25,32 @@ class MessagesViewController: MSMessagesAppViewController {
         presentViewController(for: conversation, with: presentationStyle)
     }
 
-//    First entrypoint when user opens the app
+    //    First entrypoint when user opens the app
     func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         debugPrint(#function)
-        if let selectedMessage = conversation.selectedMessage {
-            print("selected message \(selectedMessage.summaryText)")
-        }
-
         // Determine the controller to present.
         let controller: UIViewController
 
-        if presentationStyle == .compact {
-            controller = instantiateCreatePollButtonViewController()
+        // If we already have a converstation (if the user clicked on a message), go to voting
+
+        if conversation.selectedMessage != nil {
+            print("Selected message")
+
+            if conversation.selectedMessage?.url != nil {
+                print("URL \(conversation.selectedMessage?.url)")
+            } else {
+                print("No URL")
+            }
+        }
+
+        if let selectedMessageURL = conversation.selectedMessage?.url {
+            controller = instantiateVotingViewController(with: selectedMessageURL)
         } else {
-            controller = instantiateCreatePollController()
+            if presentationStyle == .compact {
+                controller = instantiateCreatePollButtonViewController()
+            } else {
+                controller = instantiateCreatePollController()
+            }
         }
 
         // Remove any existing child controllers.
@@ -67,6 +79,7 @@ class MessagesViewController: MSMessagesAppViewController {
     private func instantiateCreatePollController() -> UIViewController {
         debugPrint(#function)
         guard let createPollViewController = storyboard?.instantiateViewController(withIdentifier: CreatePollViewController.identifier) as? CreatePollViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
+        
         createPollViewController.delegate = self
         return createPollViewController
     }
@@ -74,10 +87,20 @@ class MessagesViewController: MSMessagesAppViewController {
     private func instantiateCreatePollButtonViewController() -> UIViewController {
         debugPrint(#function)
         guard let createPollButtonViewController = storyboard?.instantiateViewController(withIdentifier: CreatePollButtonViewController.identifier) as? CreatePollButtonViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
+
         createPollButtonViewController.delegate = self
         return createPollButtonViewController
     }
 
+    private func instantiateVotingViewController(with url: URL) -> UIViewController {
+        debugPrint(#function)
+        guard let votingViewController = storyboard?.instantiateViewController(withIdentifier: VotingViewController.identifier) as? VotingViewController,
+        let queryItems = NSURLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems
+        else { fatalError("Unable to instantiate VotingViewController from storyboard") }
+
+        votingViewController.poll = Poll(queryItemsComponents: queryItems)
+        return votingViewController
+    }
 }
 
 //Called when the user clicks the Create Poll Button to start creating a poll
@@ -85,7 +108,6 @@ extension MessagesViewController: CreatePollButtonViewControllerDelegate {
     func createPollButtonTapped(from viewController: CreatePollButtonViewController) {
         print("Requested")
         requestPresentationStyle(.expanded)
-
     }
 }
 
@@ -93,7 +115,7 @@ extension MessagesViewController: CreatePollButtonViewControllerDelegate {
 extension MessagesViewController: CreatePollViewControllerDelegate {
     func userCreated(poll: Poll, inViewController: CreatePollViewController) {
         debugPrint("created poll \(poll.question)")
-        let viiew = UIView(frame: CGRect(x: 0, y: 0, width: 376, height: 300))
+        let viiew = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 300))
         viiew.backgroundColor = UIColor.red
 
         guard let activeConversation = activeConversation else { print("No active convo"); return }
@@ -104,12 +126,17 @@ extension MessagesViewController: CreatePollViewControllerDelegate {
         layout.image = Poll.imageRepresentation(of: viiew)
         message.layout = layout
 
+        var components = URLComponents()
+        components.queryItems = poll.urlQueryItems
+        guard let componentURL = components.url else { fatalError("URL not found for poll \(poll.question)") }
+        message.url = componentURL
+
         activeConversation.insert(message) { error in
             if let error = error {
                 print(error)
             }
         }
-
+        
         requestPresentationStyle(.compact)
     }
 }

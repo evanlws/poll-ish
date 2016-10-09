@@ -19,5 +19,5 @@ extension Poll {
 
         return image
     }
-
+    
 }
