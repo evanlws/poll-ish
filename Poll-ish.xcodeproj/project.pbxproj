@@ -16,6 +16,7 @@
 		4F4DF1141D87AEE9006AFBB1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */; };
 		4F4DF1161D87AEE9006AFBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */; };
 		4F5EB69B1D8B81ED00202117 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5EB69A1D8B81ED00202117 /* Poll.swift */; };
+		4F7666B01DA9F45900B529F5 /* Poll+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7666AF1DA9F45900B529F5 /* Poll+Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F4DF1171D87AEE9006AFBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F5EB69A1D8B81ED00202117 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		4F7666AF1DA9F45900B529F5 /* Poll+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Poll+Image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4F4B08C41D88F7B500CE91B8 /* CreatePollButtonViewController.swift */,
 				4F4B08C21D88F38000CE91B8 /* CreatePollViewController.swift */,
 				4F5EB69A1D8B81ED00202117 /* Poll.swift */,
+				4F7666AF1DA9F45900B529F5 /* Poll+Image.swift */,
 				4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */,
 				4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */,
 				4F4DF1171D87AEE9006AFBB1 /* Info.plist */,
@@ -226,6 +229,7 @@
 				4F4DF1111D87AEE9006AFBB1 /* MessagesViewController.swift in Sources */,
 				4F4B08C31D88F38000CE91B8 /* CreatePollViewController.swift in Sources */,
 				4F4B08C51D88F7B500CE91B8 /* CreatePollButtonViewController.swift in Sources */,
+				4F7666B01DA9F45900B529F5 /* Poll+Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

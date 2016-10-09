@@ -29,7 +29,7 @@ class Poll {
     self.choices = choices
   }
   
-  func userVotedForChoiceAt(index: Int) {
+  func userVotedForChoice(at index: Int) {
     choices[index].votes += 1
   }
   

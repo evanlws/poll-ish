@@ -23,13 +23,8 @@ class CreatePollViewController: UIViewController {
   static let identifier = "CreatePollViewController"
   
   weak var delegate: CreatePollViewControllerDelegate?
-  
-  // MARK: Navigation
-  @IBAction func cancel(buttonTapped: UIButton) {
-    
-  }
-  
-  @IBAction func createPoll(buttonTapped: UIButton) {
+
+    @IBAction func createPollButtonTapped(withSender createPollButton: UIButton) {
     guard
       let questionText = questionTextField.text,
       let firstChoiceText = firstChoiceTextField.text,
