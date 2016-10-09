@@ -13,7 +13,7 @@ class MessagesViewController: MSMessagesAppViewController {
   
   override func willBecomeActive(with conversation: MSConversation) {
     super.willBecomeActive(with: conversation)
-    
+
     // Present the view controller appropriate for the conversation and presentation style.
     presentViewController(for: conversation, with: presentationStyle)
   }
@@ -26,14 +26,15 @@ class MessagesViewController: MSMessagesAppViewController {
   }
   
   func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+
+    if let selectedMessage = conversation.selectedMessage {
+        print("selected message \(selectedMessage.summaryText)")
+    }
+
     // Determine the controller to present.
     let controller: UIViewController
-    
-    if presentationStyle == .compact {
-      controller = instantiatePollsViewController()
-    } else {
-      controller = instantiateCreatePollController()
-    }
+
+    controller = instantiateCreatePollButtonViewController()
     
     // Remove any existing child controllers.
     for child in childViewControllers {
@@ -64,9 +65,10 @@ class MessagesViewController: MSMessagesAppViewController {
     return createPollViewController
   }
   
-  private func instantiatePollsViewController() -> UIViewController {
-    guard let pollsViewController = storyboard?.instantiateViewController(withIdentifier: PollsViewController.identifier) as? PollsViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
-    return pollsViewController
+  private func instantiateCreatePollButtonViewController() -> UIViewController {
+    guard let createPollButtonViewController = storyboard?.instantiateViewController(withIdentifier: CreatePollButtonViewController.identifier) as? CreatePollButtonViewController else { fatalError("Unable to instantiate CreatePollViewController from storyboard") }
+    createPollButtonViewController.delegate = self
+    return createPollButtonViewController
   }
 
 }
@@ -75,4 +77,11 @@ extension MessagesViewController: CreatePollViewControllerDelegate {
   func userCreated(poll: Poll, inViewController: CreatePollViewController) {
     debugPrint("created poll \(poll.question)")
   }
+}
+
+extension MessagesViewController: CreatePollButtonViewControllerDelegate {
+    func createPollButtonTapped(from viewController: CreatePollButtonViewController) {
+        print("Requested")
+        requestPresentationStyle(.expanded)
+    }
 }

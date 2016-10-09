@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F4B08C31D88F38000CE91B8 /* CreatePollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B08C21D88F38000CE91B8 /* CreatePollViewController.swift */; };
-		4F4B08C51D88F7B500CE91B8 /* PollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B08C41D88F7B500CE91B8 /* PollsViewController.swift */; };
+		4F4B08C51D88F7B500CE91B8 /* CreatePollButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B08C41D88F7B500CE91B8 /* CreatePollButtonViewController.swift */; };
 		4F4DF1021D87AEE9006AFBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DF1011D87AEE9006AFBB1 /* Assets.xcassets */; };
 		4F4DF1091D87AEE9006AFBB1 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4F4DF1081D87AEE9006AFBB1 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4F4DF10E1D87AEE9006AFBB1 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4DF10D1D87AEE9006AFBB1 /* Messages.framework */; };
@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4F4B08C21D88F38000CE91B8 /* CreatePollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePollViewController.swift; sourceTree = "<group>"; };
-		4F4B08C41D88F7B500CE91B8 /* PollsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollsViewController.swift; sourceTree = "<group>"; };
+		4F4B08C41D88F7B500CE91B8 /* CreatePollButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePollButtonViewController.swift; sourceTree = "<group>"; };
 		4F4DF0FE1D87AEE9006AFBB1 /* Poll-ish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll-ish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4DF1011D87AEE9006AFBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F4DF1031D87AEE9006AFBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				4F4DF1101D87AEE9006AFBB1 /* MessagesViewController.swift */,
+				4F4B08C41D88F7B500CE91B8 /* CreatePollButtonViewController.swift */,
 				4F4B08C21D88F38000CE91B8 /* CreatePollViewController.swift */,
-				4F4B08C41D88F7B500CE91B8 /* PollsViewController.swift */,
 				4F5EB69A1D8B81ED00202117 /* Poll.swift */,
 				4F4DF1121D87AEE9006AFBB1 /* MainInterface.storyboard */,
 				4F4DF1151D87AEE9006AFBB1 /* Assets.xcassets */,
@@ -225,7 +225,7 @@
 				4F5EB69B1D8B81ED00202117 /* Poll.swift in Sources */,
 				4F4DF1111D87AEE9006AFBB1 /* MessagesViewController.swift in Sources */,
 				4F4B08C31D88F38000CE91B8 /* CreatePollViewController.swift in Sources */,
-				4F4B08C51D88F7B500CE91B8 /* PollsViewController.swift in Sources */,
+				4F4B08C51D88F7B500CE91B8 /* CreatePollButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
