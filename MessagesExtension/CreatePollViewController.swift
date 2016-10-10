@@ -10,8 +10,7 @@ import UIKit
 
 protocol CreatePollViewControllerDelegate: class {
     //  Called when the user taps to create a new poll
-    func userCreated(poll: Poll, inViewController: CreatePollViewController)
-
+    func userCreated(poll: Poll, from viewController: CreatePollViewController)
 }
 
 class CreatePollViewController: UIViewController {
@@ -36,7 +35,7 @@ class CreatePollViewController: UIViewController {
         let newPoll = Poll(question: questionText, choices: [firstChoice, secondChoice])
 
         // Call the delegate with the selected poll
-        delegate?.userCreated(poll: newPoll, inViewController: self)
+        delegate?.userCreated(poll: newPoll, from: self)
     }
 
 }

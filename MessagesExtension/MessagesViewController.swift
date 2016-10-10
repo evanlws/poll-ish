@@ -13,7 +13,7 @@ class MessagesViewController: MSMessagesAppViewController {
 
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
-
+        debugPrint(#function)
         // Present the view controller appropriate for the conversation and presentation style.
         presentViewController(for: conversation, with: presentationStyle)
     }
@@ -99,7 +99,30 @@ class MessagesViewController: MSMessagesAppViewController {
         else { fatalError("Unable to instantiate VotingViewController from storyboard") }
 
         votingViewController.poll = Poll(queryItemsComponents: queryItems)
+        votingViewController.delegate = self
         return votingViewController
+    }
+
+    // MARK: Send poll MSMessage
+    func stage(poll: Poll) {
+        let layout = MSMessageTemplateLayout()
+        layout.image = Poll.imageRepresentation(of: poll)
+
+        let message = MSMessage(session: MSSession())
+        message.layout = layout
+
+        var components = URLComponents()
+        components.queryItems = poll.urlQueryItems
+
+        guard let componentURL = components.url else { fatalError("URL not found for poll \(poll.question)") }
+        message.url = componentURL
+
+        guard let activeConversation = activeConversation else { print("No active convo"); return }
+        activeConversation.insert(message) { error in
+            if let error = error {
+                print(error)
+            }
+        }
     }
 }
 
@@ -113,30 +136,18 @@ extension MessagesViewController: CreatePollButtonViewControllerDelegate {
 
 //Called when the user just created a poll
 extension MessagesViewController: CreatePollViewControllerDelegate {
-    func userCreated(poll: Poll, inViewController: CreatePollViewController) {
+    func userCreated(poll: Poll, from viewController: CreatePollViewController) {
         debugPrint("created poll \(poll.question)")
-        let viiew = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 300))
-        viiew.backgroundColor = UIColor.red
+        stage(poll: poll)
+        requestPresentationStyle(.compact)
+    }
+}
 
-        guard let activeConversation = activeConversation else { print("No active convo"); return }
-        //guard let selectedMessage = activeConversation.selectedMessage else { print("No message"); return }
-
-        let message = MSMessage(session: MSSession())
-        let layout = MSMessageTemplateLayout()
-        layout.image = Poll.imageRepresentation(of: viiew)
-        message.layout = layout
-
-        var components = URLComponents()
-        components.queryItems = poll.urlQueryItems
-        guard let componentURL = components.url else { fatalError("URL not found for poll \(poll.question)") }
-        message.url = componentURL
-
-        activeConversation.insert(message) { error in
-            if let error = error {
-                print(error)
-            }
-        }
-        
+//Called wheh a user votes in a poll
+extension MessagesViewController: VotingViewControllerDelegate {
+    func userVoted(in poll: Poll, from viewController: VotingViewController) {
+        debugPrint("Voted in poll \(poll.question)")
+        stage(poll: poll)
         requestPresentationStyle(.compact)
     }
 }

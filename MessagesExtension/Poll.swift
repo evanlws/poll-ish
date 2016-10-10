@@ -82,7 +82,4 @@ class Poll {
         urlQueryItems[index + 1].value = String(choices[index].votes)
     }
 
-    // MARK: Helper Methods
-
-
 }
