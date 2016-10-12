@@ -43,12 +43,11 @@ extension Poll {
     }
 
     private static func image(for view: UIView) -> UIImage? {
-        UIGraphicsBeginImageContext(view.bounds.size)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0)
         guard let contextRef = UIGraphicsGetCurrentContext() else { return nil }
         view.layer.render(in: contextRef)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-
         return image
     }
 
