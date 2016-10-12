@@ -15,6 +15,7 @@ extension Poll {
 
         let question = questionLabel(with: poll.question)
         let containerStackView = stackView(with: [question])
+        containerStackView.backgroundColor = .red
 
         messageView.addSubview(containerStackView)
 
@@ -63,10 +64,11 @@ extension Poll {
     }
 
     private static func questionLabel(with text: String) -> UILabel {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 250, height: 20))
+        let label = UILabel(frame: CGRect(x: 0, y: 20, width: MessageView.messageViewFrame.width, height: 50))
         label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .green
+        label.textColor = .white
         label.text = text
+        label.numberOfLines = 2
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

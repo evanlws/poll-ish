@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQA-Tc-1yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-97"/>
+            <point key="canvasLocation" x="999" y="-76"/>
         </scene>
         <!--Create Poll View Controller-->
         <scene sceneID="DbI-Aa-TtZ">
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gI2-4e-68i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="112"/>
+            <point key="canvasLocation" x="1647" y="112"/>
         </scene>
         <!--Voting View Controller-->
         <scene sceneID="g5v-pg-bLs">
@@ -171,7 +171,7 @@
                                     <action selector="didTapOptionTwoWithSender:" destination="QCG-eI-rip" eventType="touchUpInside" id="Yjs-4Z-Ll3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNM-Lf-PH8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNM-Lf-PH8">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,12 +179,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Psk-Oj-qcs" firstAttribute="centerX" secondItem="kgF-eB-fHt" secondAttribute="centerX" id="2Px-oM-huy"/>
                             <constraint firstItem="9dL-Az-gpc" firstAttribute="top" secondItem="Dh4-pN-bj5" secondAttribute="bottom" constant="370" id="4m9-WS-c07"/>
+                            <constraint firstItem="Psk-Oj-qcs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PNM-Lf-PH8" secondAttribute="bottom" constant="5" id="Dj7-L7-7KS"/>
                             <constraint firstItem="PNM-Lf-PH8" firstAttribute="centerX" secondItem="Psk-Oj-qcs" secondAttribute="centerX" id="HEw-ZL-cQ0"/>
                             <constraint firstItem="PNM-Lf-PH8" firstAttribute="top" secondItem="caj-FL-cFS" secondAttribute="bottom" constant="33" id="LkK-N6-8e1"/>
                             <constraint firstItem="Dh4-pN-bj5" firstAttribute="top" secondItem="Psk-Oj-qcs" secondAttribute="bottom" constant="54" id="UQG-Av-tjf"/>
                             <constraint firstItem="Psk-Oj-qcs" firstAttribute="leading" secondItem="Dh4-pN-bj5" secondAttribute="leading" id="ZKh-Bb-Ddf"/>
-                            <constraint firstItem="PNM-Lf-PH8" firstAttribute="centerX" secondItem="kgF-eB-fHt" secondAttribute="centerX" id="cxX-Rd-eFF"/>
+                            <constraint firstItem="PNM-Lf-PH8" firstAttribute="leading" secondItem="kgF-eB-fHt" secondAttribute="leadingMargin" id="c5B-25-yig"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PNM-Lf-PH8" secondAttribute="trailing" id="hwq-5F-cdr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -195,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqd-5U-G41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="112"/>
+            <point key="canvasLocation" x="2297" y="112"/>
         </scene>
     </scenes>
 </document>
