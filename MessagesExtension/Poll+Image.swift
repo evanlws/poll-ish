@@ -10,12 +10,9 @@ import UIKit
 
 extension Poll {
 
-    static func imageRepresentation(of poll: Poll) -> UIImage? {
-        let messageView = MessageView(frame: MessageView.messageViewFrame)
-
-        let question = questionLabel(with: poll.question)
-        let containerStackView = stackView(with: [question])
-        containerStackView.backgroundColor = .red
+    func imageRepresentation() -> UIImage? {
+        let messageView = MessageView(with: self.choices.count)
+        let containerStackView = stackView()
 
         messageView.addSubview(containerStackView)
 
@@ -52,9 +49,53 @@ extension Poll {
         return image
     }
 
-    // MARK: UI Helper Methods
-    private static func stackView(with subviews: [UIView]) -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: subviews)
+    // MARK: Message UI
+    private var questionLabel: UILabel {
+        let label = UILabel(frame: CGRect(x: 0, y: 50, width: MessageView.messageViewFrame.width, height: 50))
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .white
+        label.text = self.question
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.backgroundColor = .green
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }
+
+    private func messageLabels() -> [UILabel] {
+        var labelArray = [questionLabel]
+        for (index, choice) in self.choices.enumerated() {
+            let label = UILabel(frame: CGRect(x: 0, y: yOrigin(for: index), width: MessageView.messageViewFrame.width, height: 20))
+            label.textColor = .white
+            label.text = choice.option
+            label.textAlignment = .center
+            label.translatesAutoresizingMaskIntoConstraints = false
+            labelArray.append(label)
+        }
+        return labelArray
+    }
+
+    private func yOrigin(for choiceIndex: Int) -> CGFloat {
+        switch choiceIndex {
+        case 0:
+            return 125
+        case 1:
+            return 170
+        case 2:
+            return 210
+        case 3:
+            return 250
+        case 4:
+            return 290
+        case 5:
+            return 330
+        default:
+            return MessageView.messageViewFrame.height
+        }
+    }
+
+    private func stackView() -> UIStackView {
+        let stackView = UIStackView(arrangedSubviews: messageLabels())
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .center
@@ -63,14 +104,4 @@ extension Poll {
         return stackView
     }
 
-    private static func questionLabel(with text: String) -> UILabel {
-        let label = UILabel(frame: CGRect(x: 0, y: 20, width: MessageView.messageViewFrame.width, height: 50))
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .white
-        label.text = text
-        label.numberOfLines = 2
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }
 }

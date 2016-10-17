@@ -75,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CAFCAEB1DB1C9D8000A9034 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F5EB69A1D8B81ED00202117 /* Poll.swift */,
+				4F7666AF1DA9F45900B529F5 /* Poll+Image.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4F4DF0F71D87AEE9006AFBB1 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				4F7666B11DAAADB600B529F5 /* Controller */,
-				4F5EB69A1D8B81ED00202117 /* Poll.swift */,
-				4F7666AF1DA9F45900B529F5 /* Poll+Image.swift */,
+				3CAFCAEB1DB1C9D8000A9034 /* Model */,
 				4F7666B21DAAADC200B529F5 /* View */,
 				4F4DF1171D87AEE9006AFBB1 /* Info.plist */,
 			);
@@ -403,10 +411,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7ZE54HDXZR;
 				INFOPLIST_FILE = "Poll-ish/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,10 +428,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7ZE54HDXZR;
 				INFOPLIST_FILE = "Poll-ish/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanlewis.Poll-ish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

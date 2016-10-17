@@ -106,7 +106,7 @@ class MessagesViewController: MSMessagesAppViewController {
     // MARK: Send poll MSMessage
     func stage(poll: Poll) {
         let layout = MSMessageTemplateLayout()
-        layout.image = Poll.imageRepresentation(of: poll)
+        layout.image = poll.imageRepresentation()
 
         let message = MSMessage(session: MSSession())
         message.layout = layout

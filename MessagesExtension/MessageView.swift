@@ -8,10 +8,22 @@
 
 import UIKit
 
-
 class MessageView: UIView {
 
-    static let messageViewFrame = CGRect(x: 0, y: 0, width: 300, height: 250)
+    static let messageViewFrame = CGRect(x: 0, y: 0, width: 400, height: 600)  //400 , 600 Max 7 Plus //
+
+    convenience init(with pollNumber: Int) {
+        let frameHeight: Int
+
+        switch pollNumber {
+        case 2:
+            frameHeight = 300
+        default:
+            frameHeight = 340
+        }
+        
+        self.init(frame:CGRect(x: 0, y: 0, width: 250, height: frameHeight))
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
